@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirley Pankará — Deputada Estadual 50888</title>
+<meta name="description" content="Chirley Pankará, mulher indígena nordestina, pedagoga e ativista dos direitos humanos. Primeira co-deputada indígena do Estado de São Paulo, candidata a Deputada Estadual. Número 50888.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul: #1769b2;
+    --azul-escuro: #0f4a80;
+    --vermelho: #b72b14;
+    --amarelo: #ffcc00;
+    --preto: #050306;
+    --creme: #fdfaf3;
+    --branco: #ffffff;
+    --texto: #241d18;
+    --sombra: 0 20px 45px rgba(5,3,6,0.18);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Poppins', sans-serif;
+    color:var(--texto);
+    background:var(--creme);
+    overflow-x:hidden;
+  }
+
+  img{max-width:100%; display:block;}
+
+  a{text-decoration:none; color:inherit;}
+
+  .container{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 28px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    transition:transform .25s ease, box-shadow .25s ease;
+    border:2px solid transparent;
+  }
+  .pill:hover{transform:translateY(-3px);}
+
+  .pill--amarelo{background:var(--amarelo); color:var(--preto); box-shadow:0 10px 24px rgba(255,204,0,0.35);}
+  .pill--outline{border-color:var(--branco); color:var(--branco);}
+  .pill--outline:hover{background:rgba(255,255,255,0.12);}
+  .pill--azul{background:var(--azul); color:var(--branco); box-shadow:0 10px 24px rgba(23,105,178,0.35);}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(5,3,6,0.55);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    transition:background .3s ease;
+  }
+  .nav-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 24px;
+  }
+  .brand{
+    font-family:'Permanent Marker', cursive;
+    font-size:1.5rem;
+    color:var(--branco);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand .sunburst{
+    width:32px; height:32px;
+    display:inline-block;
+  }
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:32px;
+  }
+  nav a{
+    color:var(--branco);
+    font-weight:500;
+    font-size:0.95rem;
+    position:relative;
+    padding-bottom:4px;
+  }
+  nav a::after{
+    content:"";
+    position:absolute;
+    left:0; bottom:0;
+    width:0; height:2px;
+    background:var(--amarelo);
+    transition:width .25s ease;
+  }
+  nav a:hover::after{width:100%;}
+  .nav-actions{display:flex; align-items:center; gap:16px;}
+  .nav-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-end;
+    background:var(--preto);
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:url('assets/DSC08653.jpg');
+    background-size:cover;
+    background-position:center 15%;
+    filter:saturate(1.05);
+  }
+  .hero-overlay{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(5,3,6,0.15) 0%, rgba(5,3,6,0.35) 55%, rgba(5,3,6,0.92) 100%),
+      linear-gradient(90deg, rgba(5,3,6,0.75) 0%, rgba(5,3,6,0.15) 55%, rgba(5,3,6,0.35) 100%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:0 24px 80px;
+    color:var(--branco);
+  }
+  .hero-inner{
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.35);
+    padding:8px 18px;
+    border-radius:999px;
+    font-size:0.85rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  .kicker span.dot{width:8px; height:8px; border-radius:50%; background:var(--amarelo);}
+  .hero h1{
+    font-family:'Permanent Marker', cursive;
+    font-size:clamp(3rem, 9vw, 6.5rem);
+    line-height:0.95;
+    color:var(--branco);
+    text-shadow:0 6px 30px rgba(0,0,0,0.4);
+  }
+  .hero h1 span{color:var(--amarelo);}
+  .hero-sub{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:22px 0 26px;
+    flex-wrap:wrap;
+  }
+  .badge-numero{
+    display:flex;
+    flex-direction:column;
+    background:var(--azul);
+    color:var(--branco);
+    padding:8px 22px;
+    border-radius:16px;
+    box-shadow:var(--sombra);
+  }
+  .badge-numero small{font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; opacity:0.85;}
+  .badge-numero strong{font-size:2rem; line-height:1.1; font-weight:800;}
+  .hero-cargo{
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--amarelo);
+    letter-spacing:0.02em;
+  }
+  .hero-frase{
+    max-width:560px;
+    font-size:1.1rem;
+    line-height:1.6;
+    color:rgba(255,255,255,0.9);
+    margin-bottom:34px;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+
+  .scroll-cue{
+    position:absolute;
+    bottom:28px; left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+    color:rgba(255,255,255,0.75);
+    font-size:0.75rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+  }
+  .scroll-cue .line{width:1px; height:36px; background:linear-gradient(var(--amarelo), transparent); animation:pulseLine 1.8s infinite;}
+  @keyframes pulseLine{0%{opacity:.2;}50%{opacity:1;}100%{opacity:.2;}}
+
+  /* ---------- SECTION HEADINGS ---------- */
+  .section{padding:110px 0;}
+  .section-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--vermelho);
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-size:0.82rem;
+    margin-bottom:14px;
+  }
+  .section-tag::before{content:""; width:26px; height:3px; background:var(--amarelo); border-radius:3px;}
+  h2.section-title{
+    font-size:clamp(2.1rem, 4vw, 2.9rem);
+    font-weight:800;
+    color:var(--preto);
+    line-height:1.15;
+    margin-bottom:20px;
+  }
+
+  /* ---------- SOBRE / BIO ---------- */
+  .bio{
+    background:var(--branco);
+    position:relative;
+  }
+  .bio-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:70px;
+    align-items:center;
+  }
+  .bio-photo{
+    position:relative;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+  }
+  .bio-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    aspect-ratio:2/3;
+  }
+  .bio-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    border-radius:28px;
+    box-shadow:inset 0 0 0 8px rgba(255,204,0,0.9);
+    opacity:0;
+    transition:opacity .3s ease;
+  }
+  .bio-photo:hover::after{opacity:1;}
+  .bio-tagchip{
+    position:absolute;
+    bottom:-22px; left:-22px;
+    background:var(--vermelho);
+    color:var(--branco);
+    padding:16px 24px;
+    border-radius:18px;
+    font-weight:700;
+    font-size:0.95rem;
+    box-shadow:var(--sombra);
+    line-height:1.3;
+  }
+  .bio-text p{
+    font-size:1.08rem;
+    line-height:1.85;
+    color:#3a322c;
+    margin-bottom:18px;
+  }
+  .bio-text p strong{color:var(--preto);}
+  .bio-quote{
+    margin-top:28px;
+    padding-left:22px;
+    border-left:4px solid var(--amarelo);
+    font-family:'Permanent Marker', cursive;
+    font-size:1.25rem;
+    color:var(--azul-escuro);
+    line-height:1.5;
+  }
+
+  /* ---------- TRAJETÓRIA / CARDS ---------- */
+  .trajetoria{
+    background:var(--preto);
+    color:var(--branco);
+    position:relative;
+  }
+  .trajetoria::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(23,105,178,0.35), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(183,43,20,0.35), transparent 45%);
+    pointer-events:none;
+  }
+  .trajetoria .section-tag{color:var(--amarelo);}
+  .trajetoria h2.section-title{color:var(--branco);}
+  .trajetoria-lead{
+    max-width:640px;
+    color:rgba(255,255,255,0.75);
+    font-size:1.05rem;
+    line-height:1.7;
+    margin-bottom:56px;
+  }
+  .card-grid{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  .card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:20px;
+    padding:32px 28px;
+    transition:transform .3s ease, border-color .3s ease, background .3s ease;
+  }
+  .card:hover{
+    transform:translateY(-8px);
+    border-color:var(--amarelo);
+    background:rgba(255,255,255,0.08);
+  }
+  .card .icon{
+    width:52px; height:52px;
+    border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.5rem;
+    margin-bottom:18px;
+  }
+  .card:nth-child(3n+1) .icon{background:rgba(23,105,178,0.25); color:#6fb3ff;}
+  .card:nth-child(3n+2) .icon{background:rgba(255,204,0,0.2); color:var(--amarelo);}
+  .card:nth-child(3n+3) .icon{background:rgba(183,43,20,0.25); color:#ff8266;}
+  .card h3{font-size:1.1rem; font-weight:700; margin-bottom:10px;}
+  .card p{font-size:0.94rem; line-height:1.65; color:rgba(255,255,255,0.72);}
+
+  .stats-row{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+    margin-top:56px;
+    padding-top:48px;
+    border-top:1px solid rgba(255,255,255,0.14);
+    text-align:center;
+  }
+  .stat .num{
+    font-family:'Permanent Marker', cursive;
+    font-size:2.6rem;
+    color:var(--amarelo);
+    line-height:1;
+    margin-bottom:12px;
+  }
+  .stat .lbl{
+    font-size:0.92rem;
+    color:rgba(255,255,255,0.75);
+    line-height:1.5;
+  }
+
+  /* ---------- CAMPANHA / DESTAQUE ---------- */
+  .campanha{
+    background:linear-gradient(180deg, var(--creme), #fff5db);
+  }
+  .campanha-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .campanha-art{
+    position:relative;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transform:rotate(-1.5deg);
+  }
+  .campanha-art img{width:100%; display:block;}
+  .campanha-copy .section-tag{color:var(--azul);}
+  .campanha-copy p{
+    font-size:1.08rem;
+    line-height:1.8;
+    color:#3a322c;
+    margin-bottom:16px;
+  }
+  .numero-grande{
+    display:inline-flex;
+    align-items:baseline;
+    gap:14px;
+    margin:26px 0 32px;
+  }
+  .numero-grande .num{
+    font-size:4.2rem;
+    font-weight:800;
+    color:var(--azul);
+    line-height:1;
+  }
+  .numero-grande .lbl{
+    font-size:1rem;
+    font-weight:700;
+    color:var(--vermelho);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+
+  /* ---------- BANDEIRAS / MINI STATS ---------- */
+  .bandeiras{
+    background:var(--branco);
+    text-align:center;
+  }
+  .bandeiras .section-tag, .bandeiras h2.section-title, .bandeiras .trajetoria-lead{
+    margin-left:auto; margin-right:auto;
+  }
+  .flag-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:22px;
+    margin-top:50px;
+  }
+  .flag{
+    padding:34px 20px;
+    border-radius:18px;
+    background:var(--creme);
+    border-top:5px solid var(--amarelo);
+    transition:transform .25s ease;
+  }
+  .flag:nth-child(2){border-top-color:var(--azul);}
+  .flag:nth-child(3){border-top-color:var(--vermelho);}
+  .flag:nth-child(4){border-top-color:var(--preto);}
+  .flag:hover{transform:translateY(-6px);}
+  .flag .emoji{font-size:2.1rem; margin-bottom:14px;}
+  .flag h4{font-size:1rem; font-weight:700; margin-bottom:8px; color:var(--preto);}
+  .flag p{font-size:0.88rem; color:#6b6058; line-height:1.5;}
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final{
+    position:relative;
+    background:var(--azul-escuro);
+    color:var(--branco);
+    overflow:hidden;
+  }
+  .cta-final::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 20% 30%, rgba(255,204,0,0.25), transparent 40%),
+               radial-gradient(circle at 80% 70%, rgba(183,43,20,0.3), transparent 40%);
+  }
+  .cta-inner{
+    position:relative; z-index:1;
+    text-align:center;
+    max-width:720px;
+    margin:0 auto;
+  }
+  .cta-inner .section-tag{color:var(--amarelo); justify-content:center;}
+  .cta-inner h2{
+    font-family:'Permanent Marker', cursive;
+    font-size:clamp(2.2rem, 5vw, 3.4rem);
+    margin-bottom:18px;
+  }
+  .cta-inner p{font-size:1.1rem; color:rgba(255,255,255,0.85); margin-bottom:36px; line-height:1.7;}
+  .cta-buttons{display:flex; gap:18px; justify-content:center; flex-wrap:wrap;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--preto);
+    color:rgba(255,255,255,0.65);
+    padding:50px 0 30px;
+  }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .footer-brand{
+    font-family:'Permanent Marker', cursive;
+    font-size:1.4rem;
+    color:var(--branco);
+    margin-bottom:10px;
+  }
+  .footer-brand + p{max-width:320px; font-size:0.9rem; line-height:1.6;}
+  .footer-links{display:flex; gap:60px; flex-wrap:wrap;}
+  .footer-col h5{color:var(--branco); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;}
+  .footer-col a, .footer-col span{display:block; font-size:0.9rem; margin-bottom:10px; color:rgba(255,255,255,0.65);}
+  .footer-col a:hover{color:var(--amarelo);}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:22px;
+    font-size:0.8rem;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 960px){
+    nav{display:none;}
+    .bio-grid, .campanha-grid{grid-template-columns:1fr; gap:44px;}
+    .campanha-art{order:-1; transform:none;}
+    .card-grid{grid-template-columns:repeat(2, 1fr);}
+    .flag-grid{grid-template-columns:repeat(2, 1fr);}
+    .stats-row{grid-template-columns:1fr;}
+    .bio-tagchip{position:static; margin-top:18px; display:inline-block;}
+  }
+  @media (max-width: 600px){
+    .section{padding:80px 0;}
+    .card-grid{grid-template-columns:1fr;}
+    .flag-grid{grid-template-columns:1fr;}
+    .hero-content{padding-bottom:60px;}
+    .footer-links{gap:34px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#topo" class="brand">
+      <svg class="sunburst" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g stroke-linecap="round" stroke-width="3">
+          <line x1="20" y1="2" x2="20" y2="14" stroke="#b72b14"/>
+          <line x1="32" y1="6" x2="26" y2="16" stroke="#1769b2"/>
+          <line x1="38" y1="20" x2="26" y2="20" stroke="#ffcc00"/>
+          <line x1="32" y1="34" x2="26" y2="24" stroke="#1769b2"/>
+          <line x1="20" y1="38" x2="20" y2="26" stroke="#b72b14"/>
+          <line x1="8" y1="34" x2="14" y2="24" stroke="#ffcc00"/>
+          <line x1="2" y1="20" x2="14" y2="20" stroke="#1769b2"/>
+          <line x1="8" y1="6" x2="14" y2="16" stroke="#b72b14"/>
+        </g>
+        <circle cx="20" cy="20" r="6" fill="#ffcc00"/>
+      </svg>
+      Chirley Pankará
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#campanha">Campanha</a></li>
+        <!-- <li><a href="#bandeiras">Bandeiras</a></li> -->
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="pill pill--amarelo" href="https://www.instagram.com/chirleypankara" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="topo">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="kicker"><span class="dot"></span> Candidatura 2026 · São Paulo</span>
+        <h1>Chirley<br><span>Pankará</span></h1>
+        <div class="hero-sub">
+          <div class="badge-numero">
+            <strong style="font-size: 5em">50888</strong>
+          </div>
+          <span class="hero-cargo">Deputada Estadual</span>
+        </div>
+        <p class="hero-frase">Mulher indígena nordestina, pedagoga e ativista dos direitos humanos. Primeira co-deputada indígena do Estado de São Paulo, com 28 anos de luta por educação, saúde e direitos dos povos indígenas.</p>
+        <div class="hero-actions">
+          <a class="pill pill--amarelo" href="#sobre">Conheça a Chirley</a>
+          <a class="pill pill--outline" href="https://www.instagram.com/chirleypankara" target="_blank" rel="noopener">Siga no Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE / BIO -->
+  <section class="section bio" id="sobre">
+    <div class="container bio-grid">
+      <div class="bio-photo">
+        <img src="assets/0RBA8938.jpg" alt="Retrato de Chirley Pankará com cocar de penas azuis e vestimenta tradicional indígena">
+      </div>
+      <div class="bio-text">
+        <span class="section-tag">Quem é Chirley</span>
+        <h2 class="section-title">Ancestralidade, educação e luta em cada trajetória</h2>
+        <p><strong>Chirley Pankará</strong> é mulher indígena nordestina e ativista dos direitos humanos, vive em São Paulo há 28 anos. Mãe de duas filhas, iniciou sua trajetória profissional na capital paulista como empregada doméstica.</p>
+        <p>Desde 2007 atua em diversas áreas — meio ambiente, cultura, educação, saúde, direitos das mulheres e defesa dos povos indígenas, tanto das aldeias quanto em contexto urbano —, reunindo experiências e participações em eventos, projetos e articulações de âmbito nacional e internacional.</p>
+        <p>Em 2018, tornou-se a <strong>primeira co-deputada indígena do Estado de São Paulo</strong>. Durante o mandato, destinou emendas parlamentares aos povos indígenas e propôs a criação do <strong>Agosto Indígena</strong> e a instituição do <strong>Dia Estadual da Mulher Indígena</strong>, hoje no calendário oficial do Estado de São Paulo.</p>
+        <p class="bio-quote">"Ancestralidade é sustentabilidade; a inovação está em nossas mãos."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section class="section trajetoria" id="trajetoria">
+    <div class="container">
+      <span class="section-tag">Trajetória</span>
+      <h2 class="section-title">Uma trajetória de luta, ancestralidade e representatividade</h2>
+      <p class="trajetoria-lead">Do trabalho como empregada doméstica à primeira cadeira indígena na história da Assembleia Legislativa de São Paulo — uma caminhada construída com educação, articulação e coragem.</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">🏡</div>
+          <h3>Origem e chegada a São Paulo</h3>
+          <p>Mulher indígena nordestina, vive em São Paulo há 28 anos. Iniciou sua trajetória profissional na capital paulista como empregada doméstica.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌳</div>
+          <h3>Atuação social desde 2007</h3>
+          <p>Meio ambiente, cultura, educação, saúde, direitos das mulheres e defesa dos povos indígenas — das aldeias ao contexto urbano. Integrou a Agenda 21 no consórcio das sete cidades do Grande ABC, pelo despertar da consciência ambiental.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏛️</div>
+          <h3>Primeira co-deputada indígena de SP</h3>
+          <p>Em 2018, tornou-se a primeira co-deputada indígena do Estado de São Paulo, com emendas parlamentares, requerimentos de informação e audiências públicas em defesa dos povos indígenas.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📅</div>
+          <h3>Datas conquistadas</h3>
+          <p>Criou o Agosto Indígena e instituiu o Dia Estadual da Mulher Indígena, celebrado em 5 de setembro — ambos incorporados ao calendário oficial do Estado de São Paulo.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏥</div>
+          <h3>Saúde indígena na pandemia</h3>
+          <p>Atuou pela implantação de UBSs de referência em saúde indígena na região do Grande ABC durante o período pandêmico.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎓</div>
+          <h3>Formação acadêmica</h3>
+          <p>Pedagoga pela FAMA, mestre em Educação pela PUC-SP, doutora em Antropologia Social pela USP e formação em Teatro em 2008.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏆</div>
+          <h3>Prêmios e reconhecimento</h3>
+          <p>Prêmio MCEYS, Prêmio Paulo Freire de Qualidade de Ensino e homenagem da então vereadora Erika Hilton no Dia Internacional da Mulher.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🪶</div>
+          <h3>Gestão dos CECIs Guarani</h3>
+          <p>Gestão educacional dos Centros de Educação e Cultura Indígena (CECIs) do povo Guarani da Zona Sul e do Pico do Jaraguá, de 2010 a 2018.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌎</div>
+          <h3>Ministério dos Povos Indígenas</h3>
+          <p>Coordenadora-Geral de Promoção às Políticas Culturais do MPI, propondo o programa Ancestralidade Viva, de fortalecimento à cultura dos povos indígenas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPANHA -->
+  <section class="section campanha" id="campanha">
+    <div class="container campanha-grid">
+      <div class="campanha-art">
+        <img src="assets/IMG_3642.JPG.jpeg" alt="Arte oficial da campanha de Chirley Pankará, número 50888, PSOL SP">
+      </div>
+      <div class="campanha-copy">
+        <span class="section-tag">Campanha 2026</span>
+        <h2 class="section-title">Uma nova candidatura, a mesma luta</h2>
+        <p>Depois de se tornar a primeira co-deputada indígena do Estado de São Paulo e somar 27.802 votos em 2022, Chirley Pankará é candidata a Deputada Estadual por São Paulo pelo PSOL, retomando a luta por educação, saúde, cultura e direitos dos povos indígenas.</p>
+        <div class="numero-grande">
+          <span class="num">50888</span>
+          <span class="lbl">Deputada<br>Estadual</span>
+        </div>
+        <div class="hero-actions">
+          <a class="pill pill--azul" href="https://www.instagram.com/chirleypankara" target="_blank" rel="noopener">Acompanhe a campanha</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDEIRAS -->
+  <!-- <section class="section bandeiras" id="bandeiras">
+    <div class="container">
+      <span class="section-tag">Bandeiras</span>
+      <h2 class="section-title">O que move essa candidatura</h2>
+      <p class="trajetoria-lead" style="color:#6b6058;">Educação, cultura, ancestralidade e direitos dos povos indígenas como eixos centrais de atuação parlamentar.</p>
+      <div class="flag-grid">
+        <div class="flag">
+          <div class="emoji">📚</div>
+          <h4>Meio ambiente</h4>
+          <p>Fortalecimento dos CECIs e da educação escolar indígena em todo o estado.</p>
+        </div>
+        <div class="flag">
+          <div class="emoji">🌎</div>
+          <h4>Políticas culturais</h4>
+          <p>Valorização e financiamento da produção cultural dos povos originários.</p>
+        </div>
+        <div class="flag">
+          <div class="emoji">🪶</div>
+          <h4>Direitos ancestrais</h4>
+          <p>Defesa de territórios, memória e tradições dos povos indígenas.</p>
+        </div>
+        <div class="flag">
+          <div class="emoji">👩🏽‍🤝‍👩🏾</div>
+          <h4>Mulheres indígenas</h4>
+          <p>Apoio à articulação e protagonismo das mulheres guerreiras da ancestralidade.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA FINAL -->
+  <section class="section cta-final" id="contato">
+    <div class="container cta-inner">
+      <span class="section-tag">Ancestralidade é sustentabilidade</span>
+      <h2>Vamos juntos legislar por uma sociedade plural, com garantia de direitos</h2>
+      <p>A inovação está em nossas mãos. Acompanhe a campanha, as agendas e as propostas de Chirley Pankará — número 50888.</p>
+      <div class="cta-buttons">
+        <a class="pill pill--amarelo" href="https://www.instagram.com/chirleypankara" target="_blank" rel="noopener">@chirleypankara no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Chirley Pankará</div>
+        <p>Mulher indígena nordestina, pedagoga e ativista dos direitos humanos. Primeira co-deputada indígena de São Paulo, candidata a Deputada Estadual — número 50888.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Navegue</h5>
+          <a href="#sobre">Sobre</a>
+          <a href="#trajetoria">Trajetória</a>
+          <a href="#campanha">Campanha</a>
+          <!-- <a href="#bandeiras">Bandeiras</a> -->
+        </div>
+        <div class="footer-col">
+          <h5>Redes</h5>
+          <a href="https://www.instagram.com/chirleypankara" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="footer-col">
+          <h5>Partido</h5>
+          <span>PSOL SP</span>
+          <span>CNPJ 68.438.286/0001-25</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Chirley Pankará. Todos os direitos reservados.</span>
+      <span>Número 50888 · Deputada Estadual</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
